@@ -1,16 +1,48 @@
-# React + Vite
+# 🧮 Calculadora com React - Desafio DIO
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto desenvolvido durante a **Formação React** da [DIO (Digital Innovation One)](https://www.dio.me/). 
 
-Currently, two official plugins are available:
+A estrutura base, componentes e as operações iniciais foram acompanhadas através das videoaulas do curso. Como parte do desafio proposto, implementei e personalizei as funções de **multiplicação** e **divisão**, além de ajustes de lógica e tratamento de erros.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Tecnologias Utilizadas
 
-## React Compiler
+- **React**
+- **Vite**
+- **Styled Components**
+- **JavaScript (ES6+)**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Funcionalidades
 
-## Expanding the ESLint configuration
+- Interface estilizada com Styled Components.
+- Operações matemáticas:
+  - Multiplicação (`*`) *(Implementada como desafio)*
+  - Divisão (`/`) com proteção contra divisão por zero *(Implementada como desafio)*
+  - Adição (`+`) e Subtração (`-`) *(Desenvolvidas em aula)*
+- Botão de limpar visor (`C`) e entrada numérica.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📦 Como Executar o Projeto
+
+1. Clone o repositório:
+   ```bash
+   git clone <url-do-repositorio>
+   ```
+
+2. Entre na pasta do projeto:
+   ```bash
+   cd desafio-01-calculadora
+   ```
+
+3. Instale as dependências:
+   ```bash
+   npm install
+   ```
+
+4. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
+
+5. Abra o navegador no endereço indicado pelo Vite (geralmente `http://localhost:5173`).
+
+---
+Desenvolvido por **Israel** durante a Formação React da DIO.

@@ -42,6 +42,7 @@ function App() {
     };
 
     const handleDivideNumbers = () => {
+        if (Number(currentNumber) === 0) return;
         if (firstNumber === "0") {
             setFirstNumber(String(currentNumber));
             setCurrentNumber("0");
@@ -65,8 +66,6 @@ function App() {
         }
     };
 
-
-
     const handleEquals = () => {
         if (firstNumber !== "0" && operation !== "" && currentNumber !== "0") {
             switch (operation) {
@@ -74,16 +73,13 @@ function App() {
                     handleSumNumbers();
                     break;
                 case "-":
-                    handleRemNumbers();
+                    handleMinusNumbers();
                     break;
                 case "/":
                     handleDivideNumbers();
                     break;
                 case "*":
                     handleMultiplyNumbers();
-                    break;
-                case "%":
-                    handleModNumbers();
                     break;
                 default:
                     break;

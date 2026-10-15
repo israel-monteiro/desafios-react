@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# 📚 Desafio 02 - GitHub Wiki em React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto foi desenvolvido durante a formação React da **DIO (Digital Innovation One)**. A aplicação consiste em uma Wiki que busca e lista repositórios públicos da API do GitHub.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🎯 O Desafio Resolvido
+O objetivo principal deste desafio era implementar a lógica que estava faltando no projeto base: **a remoção de repositórios da tela**.
 
-### `npm start`
+* **Funcionalidade desenvolvida:** Criação da função para o botão "Remover", permitindo que o usuário retire qualquer repositório da lista de exibição dinamicamente.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 💻 Código Implementado
 
-### `npm test`
+A remoção foi resolvida no arquivo `App.js` utilizando o método `.filter()` do JavaScript para gerar uma nova lista sem o repositório que foi clicado, atualizando o estado logo em seguida:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```javascript
+const handleRemoveRepo = (id) => {
+    console.log('Removendo registro', id);
+    
+    // Filtra e mantém apenas os repositórios que têm o ID diferente do clicado
+    const newRepos = repos.filter(repo => repo.id !== id);
+    
+    // Atualiza o estado para refletir a mudança na tela
+    setRepos(newRepos);
+}
+```
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🚀 Como Rodar o Projeto Localmente
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Abra o terminal na pasta deste desafio e instale as dependências:
+   ```bash
+   npm install
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm start
+   ```
 
-### `npm run eject`
+O projeto abrirá automaticamente no endereço `http://localhost:3000`.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🧑‍💻 Autor
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Desenvolvido por **Israel Monteiro**.
